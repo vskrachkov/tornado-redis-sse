@@ -50,8 +50,6 @@ class MainHandler(web.RequestHandler):
 
 
 class EventSource(web.RequestHandler):
-    _last_data = None
-
     def initialize(self):
         self.set_header('Content-Type', 'text/event-stream')
         self.set_header('Cache-Control', 'no-cache')
